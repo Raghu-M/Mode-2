@@ -1,0 +1,17 @@
+@CHARSET "ISO-8859-1";
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #005673;
+}
+.n1 {
+	position: absolute;
+	width: 50px;
+	height:50px;
+	box-sizing: border-box;
+	border-radius: 50%;
+	background-color: blue;
+	animation: a1 3s linear infinate;
+}

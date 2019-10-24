@@ -1,0 +1,38 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from CalculatorService WSDL service -->
+
+  <service name="Calculator" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://webService.hcl.com"/>
+      <parameter name="wsdlServiceElement" value="CalculatorService"/>
+      <parameter name="schemaQualified" value="http://webService.hcl.com"/>
+      <parameter name="wsdlServicePort" value="Calculator"/>
+      <parameter name="className" value="com.hcl.webService.CalculatorSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="Calculator"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="add" qname="operNS:add" xmlns:operNS="http://webService.hcl.com" returnQName="retNS:addReturn" xmlns:retNS="http://webService.hcl.com" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:a" xmlns:pns="http://webService.hcl.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:b" xmlns:pns="http://webService.hcl.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="mul" qname="operNS:mul" xmlns:operNS="http://webService.hcl.com" returnQName="retNS:mulReturn" xmlns:retNS="http://webService.hcl.com" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:a" xmlns:pns="http://webService.hcl.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:b" xmlns:pns="http://webService.hcl.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getRaghu" qname="operNS:getRaghu" xmlns:operNS="http://webService.hcl.com" returnQName="retNS:getRaghuReturn" xmlns:retNS="http://webService.hcl.com" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="display" qname="operNS:display" xmlns:operNS="http://webService.hcl.com" returnQName="retNS:displayReturn" xmlns:retNS="http://webService.hcl.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <parameter name="allowedMethods" value="add mul display getRaghu"/>
+
+  </service>
+</deployment>

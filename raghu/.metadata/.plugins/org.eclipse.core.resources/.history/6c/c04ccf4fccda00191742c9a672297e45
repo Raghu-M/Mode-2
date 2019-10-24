@@ -1,0 +1,8 @@
+package com.hcl.fault;
+
+public class Main {
+	public static void main(String[] args) throws Exception {
+		HelloWorldProxy w = new HelloWorldProxy();
+		w.sayHelloWorld("");
+	}
+}

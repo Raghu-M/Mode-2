@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Employ.java&apos; to &apos;AdvancedHibernate/src/main/java/com.hcl.AdvancedHibernate&apos;&#x0D;&#x0A;- Original project: &apos;AnnotationEmploy&apos;&#x0D;&#x0A;- Destination element: &apos;AdvancedHibernate/src/main/java/com.hcl.AdvancedHibernate&apos;&#x0D;&#x0A;- Original element: &apos;hcl.AnnotationEmploy.Employ.java&apos;" description="Copy compilation unit" destination="=AdvancedHibernate/src\/main\/java&lt;com.hcl.AdvancedHibernate" element1="/src\/main\/java&lt;hcl.AnnotationEmploy{Employ.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1569576064726" units="1" version="1.0"/>
+</session>
